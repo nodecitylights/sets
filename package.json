@@ -6,6 +6,11 @@
 		"name": "neoncitylights",
 		"url": "https://github.com/neoncitylights"
 	},
+	"keywords": [
+		"sets",
+		"set-theory",
+		"discrete-mathematics"
+	],
 	"license": "MIT",
 	"bugs": "https://github.com/neoncitylights/ts-set-theory/issues",
 	"repository": {

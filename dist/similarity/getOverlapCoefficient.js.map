@@ -1,1 +1,0 @@
-{"version":3,"file":"getOverlapCoefficient.js","sourceRoot":"","sources":["../../src/similarity/getOverlapCoefficient.ts"],"names":[],"mappings":";;;;;AAAA,yEAAiD;AAEjD;;;;GAIG;AACH,SAAwB,qBAAqB,CAAW,CAAgB,EAAE,CAAgB;IACzF,OAAO,IAAA,yBAAe,EAAC,CAAC,EAAE,CAAC,CAAC,CAAC,IAAI,GAAG,IAAI,CAAC,GAAG,CAAC,CAAC,CAAC,IAAI,EAAE,CAAC,CAAC,IAAI,CAAC,CAAC;AAC9D,CAAC;AAFD,wCAEC"}

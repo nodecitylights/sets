@@ -1,1 +1,0 @@
-{"version":3,"file":"getUnion.js","sourceRoot":"","sources":["../src/getUnion.ts"],"names":[],"mappings":";;AAAA;;;;;;;;;;;;;;;;GAgBG;AACH,SAAwB,QAAQ,CAAW,CAAgB,EAAE,CAAgB;IAC5E,MAAM,KAAK,GAAG,IAAI,GAAG,CAAW,CAAC,CAAC,CAAC;IACnC,KAAI,MAAM,OAAO,IAAI,CAAC,EAAE;QACvB,KAAK,CAAC,GAAG,CAAC,OAAO,CAAC,CAAC;KACnB;IAED,OAAO,KAAK,CAAC;AACd,CAAC;AAPD,2BAOC"}

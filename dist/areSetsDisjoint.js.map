@@ -1,1 +1,0 @@
-{"version":3,"file":"areSetsDisjoint.js","sourceRoot":"","sources":["../src/areSetsDisjoint.ts"],"names":[],"mappings":";;AAAA;;;;;;;;;;;;;;;;;GAiBG;AACH,SAAwB,eAAe,CAAW,CAAgB,EAAE,CAAgB;IACnF,KAAI,MAAM,QAAQ,IAAI,CAAC,EAAE;QACxB,KAAI,MAAM,QAAQ,IAAI,CAAC,EAAE;YACxB,IAAG,QAAQ,KAAK,QAAQ,EAAE;gBACzB,OAAO,KAAK,CAAC;aACb;SACD;KACD;IAED,OAAO,IAAI,CAAC;AACb,CAAC;AAVD,kCAUC"}

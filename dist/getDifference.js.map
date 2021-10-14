@@ -1,1 +1,0 @@
-{"version":3,"file":"getDifference.js","sourceRoot":"","sources":["../src/getDifference.ts"],"names":[],"mappings":";;AAAA;;;;;;;;;;;;;;;;GAgBG;AACH,SAAwB,aAAa,CAAW,CAAgB,EAAE,CAAgB;IACjF,MAAM,UAAU,GAAG,IAAI,GAAG,CAAW,CAAC,CAAC,CAAC;IACxC,KAAK,MAAM,OAAO,IAAI,CAAC,EAAE;QACxB,UAAU,CAAC,MAAM,CAAC,OAAO,CAAC,CAAC;KAC3B;IAED,OAAO,UAAU,CAAC;AACnB,CAAC;AAPD,gCAOC"}
