@@ -1,0 +1,53 @@
+{
+	"name": "@neoncitylights/set-theory",
+	"version": "1.0.0",
+	"description": "TS library for set theory mathematics",
+	"author": {
+		"name": "neoncitylights",
+		"url": "https://github.com/neoncitylights"
+	},
+	"license": "MIT",
+	"bugs": "https://github.com/neoncitylights/ts-set-theory/issues",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/neoncitylights/ts-set-theory.git"
+	},
+	"funding": {
+		"type": "individual",
+		"url": "https://github.com/sponsors/neoncitylights"
+	},
+	"main": "./dist",
+	"files": [
+		"./dist"
+	],
+	"directories": {
+		"test": "./tests"
+	},
+	"scripts": {
+		"build": "tsc",
+		"build:typedoc": "npx typedoc",
+		"build:all": "npm run build && npm run build:typedoc",
+		"clean": "rm -rf ./lib/ ./docs/typedocs/",
+		"test": "jest --coverage",
+		"lint": "eslint src --ext .ts,.tsx",
+		"lint:fix": "eslint --fix src --ext .ts,.tsx",
+		"test:all": "npm run test && npm run lint",
+		"prepare": "npm run build",
+		"prepublishOnly": "npm run test:all",
+		"preversion": "npm run lint",
+		"version": "npm run lint && git add -A src",
+		"postversion": "git push && git push --tags"
+	},
+	"devDependencies": {
+		"@types/jest": "^27.0.1",
+		"@typescript-eslint/eslint-plugin": "^4.32.0",
+		"@typescript-eslint/parser": "^4.32.0",
+		"eslint": "^7.32.0",
+		"eslint-plugin-jest": "^24.5.0",
+		"jest": "^27.0.6",
+		"ts-jest": "^27.0.4",
+		"ts-loader": "^9.2.6",
+		"typescript": "^4.4.4",
+		"webpack-cli": "^4.9.0"
+	}
+}
