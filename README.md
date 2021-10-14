@@ -1,4 +1,8 @@
 # @neoncitylights/set-theory
+[![codecov](https://codecov.io/gh/neoncitylights/ts-set-theory/branch/main/graph/badge.svg?token=PmaGuYKnEo)](https://codecov.io/gh/neoncitylights/ts-set-theory)
+[![Node.js workflow](https://github.com/neoncitylights/ts-set-theory/actions/workflows/main.yml/badge.svg)](https://github.com/neoncitylights/ts-set-theory/actions/workflows/main.yml)
+[![GitHub license](https://img.shields.io/github/license/neoncitylights/ts-set-theory)](https://github.com/neoncitylights/ts-set-theory/blob/main/LICENSE.txt)
+
 An NPM package written in TypeScript, allowing to run operations based on the mathematical branch of set theory - a
 subset of discrete mathematics.
 
