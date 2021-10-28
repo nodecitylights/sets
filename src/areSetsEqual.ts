@@ -1,4 +1,4 @@
-import areSetsEquivalent from 'areSetsEquivalent';
+import areSetsEquivalent from './areSetsEquivalent';
 import _containsAllElements from './containsAllElements';
 
 /**
