@@ -17,7 +17,7 @@
  */
 export default function getUnion<TElement>(a: Set<TElement>, b: Set<TElement>): Set<TElement> {
 	const union = new Set<TElement>(a);
-	for(const element of b) {
+	for (const element of b) {
 		union.add(element);
 	}
 

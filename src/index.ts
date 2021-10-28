@@ -10,6 +10,7 @@ import isProperSupersetOf from './isProperSupersetOf';
 import isSubsetOf from './isSubsetOf';
 import isSupersetOf from './isSupersetOf';
 
+export * from './similarity';
 export {
 	areSetsDisjoint,
 	areSetsEqual,
@@ -23,10 +24,3 @@ export {
 	isSubsetOf,
 	isSupersetOf
 };
-
-export {
-	getJaccardSimilarityCoefficient,
-	getLogDice,
-	getOverlapCoefficient,
-	getSorensenDiceCoefficient
-} from './similarity';

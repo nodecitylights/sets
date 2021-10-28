@@ -1,4 +1,4 @@
-import {getDifference, getUnion} from './index';
+import { getDifference, getUnion } from './index';
 
 /**
  * Represents the symmetric difference operation, which is the given set of

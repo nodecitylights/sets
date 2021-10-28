@@ -1,3 +1,4 @@
+import areSetsEquivalent from 'areSetsEquivalent';
 import _containsAllElements from './containsAllElements';
 
 /**
@@ -21,5 +22,5 @@ import _containsAllElements from './containsAllElements';
  * @returns Whether `A = B` is true
  */
 export default function areSetsEqual<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
-	return a.size === b.size && _containsAllElements(a, b);
+	return areSetsEquivalent(a, b) && _containsAllElements(a, b);
 }

@@ -16,10 +16,10 @@
  * @param b - Set B of type `<TElement>` elements
  * @returns Whether `A ∩ B = ϕ` is true
  */
-export default function areSetsDisjoint<TElement>(a: Set<TElement>, b: Set<TElement>): boolean  {
-	for(const aElement of a) {
-		for(const bElement of b) {
-			if(aElement === bElement) {
+export default function areSetsDisjoint<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
+	for (const aElement of a) {
+		for (const bElement of b) {
+			if (aElement === bElement) {
 				return false;
 			}
 		}
