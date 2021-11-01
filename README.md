@@ -49,6 +49,13 @@ isSubsetOf(d, c); // true
 * <a href="#getOverlapCoefficient">#</a> similarity.**getOverlapCoefficient**<*TElement*>(*a*, *b*): *number* • [source](./src/similarity.ts)
 * <a href="#getSorensenDiceCoefficient">#</a> similarity.**getSorensenDiceCoefficient**<*TElement*>(*a*, *b*): *number* • [source](./src/similarity.ts)
 
+#### Types
+This library provides [generic types](./src/types.ts) for describing different types of set functions via:
+* **SetFunction**<*TElement*>
+* **SetOperation**<*TElement*>
+* **SetPredicate**<*TElement*>
+* **SetSimilarity**<*TElement*>
+
 ### Set Theory 101
 #### Set
 A **set** is an unordered collection of unique elements. The type of elements can be anything, such as words, numbers, and even other sets. In math, the name of sets are usually denoted with a capital letter, like A, B, C, etc. They can be expressed in namely 2 different notations being "**Roster notation**" and "**Set-Builder notation**".
