@@ -1,4 +1,4 @@
-import {getSorensenDiceCoefficient} from '../../src';
+import { getSorensenDiceCoefficient } from '../src';
 
 describe('Sorensen\'s Dice Coefficient', () => {
 	test('computes correctly', () => {

@@ -1,4 +1,4 @@
-import {getOverlapCoefficient} from '../../src';
+import { getOverlapCoefficient } from '../src';
 
 describe('Overlap Coefficient', () => {
 	test('computes correctly', () => {

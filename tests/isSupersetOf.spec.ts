@@ -1,4 +1,4 @@
-import isSupersetOf from '../src/isSupersetOf';
+import { isSupersetOf } from '../src';
 
 test('set A is a superset of set B', () => {
 	expect(isSupersetOf(

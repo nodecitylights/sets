@@ -1,4 +1,4 @@
-import {areSetsEqual} from '../src';
+import { areSetsEqual } from '../src';
 
 test('two sets are equal to each other', () => {
 	expect(areSetsEqual(
@@ -11,5 +11,5 @@ test('two empty sets are equal to each other', () => {
 	expect(areSetsEqual<number>(
 		new Set<number>([]),
 		new Set<number>([])
-	)).toBe(true)
-})
+	)).toBe(true);
+});

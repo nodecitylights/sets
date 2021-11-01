@@ -1,4 +1,4 @@
-import {getIntersection} from '../src';
+import { getIntersection } from '../src';
 
 test('intersection of two sets is computed correctly [1]', () => {
 	expect(getIntersection<number>(

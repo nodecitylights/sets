@@ -1,4 +1,4 @@
-import isProperSubsetOf from '../src/isProperSubsetOf';
+import { isProperSubsetOf } from '../src';
 
 test('set A is correctly computed as a proper subset of set B', () => {
 	expect(isProperSubsetOf(

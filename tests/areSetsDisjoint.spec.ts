@@ -1,4 +1,4 @@
-import {areSetsDisjoint} from '../src';
+import { areSetsDisjoint } from '../src';
 
 describe('disjoint sets', () => {
 	test('two sets are disjoint to each other', () => {
@@ -12,6 +12,6 @@ describe('disjoint sets', () => {
 		expect(areSetsDisjoint(
 			new Set<number>([1, 2, 3]),
 			new Set<number>([3, 4, 5])
-		)).toBe(false)
-	})
+		)).toBe(false);
+	});
 });

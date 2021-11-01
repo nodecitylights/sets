@@ -1,4 +1,4 @@
-import {getUnion} from '../src';
+import { getUnion } from '../src';
 
 test("union of two sets is computed correctly", () => {
 	expect(getUnion<number>(

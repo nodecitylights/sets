@@ -1,4 +1,4 @@
-import {getJaccardSimilarityCoefficient} from '../../src';
+import { getJaccardSimilarityCoefficient } from '../src';
 
 describe('Jaccard\'s Similarity Coefficient', () => {
 	test('comparing "hello world" and "world hello" will result in 100% score', () => {

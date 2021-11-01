@@ -1,4 +1,4 @@
-import {getLogDice} from '../../src';
+import { getLogDice } from '../src';
 
 describe('getLogDice', () => {
 	test('getLogDice returns 14 for full similarity', () => {

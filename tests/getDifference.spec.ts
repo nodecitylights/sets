@@ -1,4 +1,4 @@
-import {getDifference} from '../src';
+import { getDifference } from '../src';
 
 test('difference of sets is computed correctly [1]', () => {
 	expect(getDifference(

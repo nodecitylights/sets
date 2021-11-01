@@ -1,4 +1,4 @@
-import getSymmetricDifference from '../src/getSymmetricDifference';
+import { getSymmetricDifference } from '../src';
 
 test("symmetric difference of two sets is computed correctly", () => {
 	expect(getSymmetricDifference(
