@@ -27,6 +27,8 @@ isSubsetOf(d, c); // true
 ```
 
 ## Documentation
+[Auto-generated API documentation is available](https://neoncitylights.github.io/ts-set-theory/).
+
 ### API Reference
 #### Predicates
 * <a href="#areSetsDisjoint">#</a> predicates.**areSetsDisjoint**<*TElement*>(*a*, *b*): *boolean* • [source](./src/predicates.ts)

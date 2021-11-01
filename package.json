@@ -30,10 +30,11 @@
 		"test": "tests"
 	},
 	"scripts": {
-		"build": "webpack",
+		"build": "webpack --color",
 		"build:typedoc": "npx typedoc",
 		"build:all": "npm run build && npm run build:typedoc",
 		"clean": "rm -rf ./dist/ ./docs/typedocs/",
+		"deploy": "gh-pages -d ./docs/typedocs",
 		"test": "jest --coverage",
 		"lint": "eslint src --ext .ts,.tsx",
 		"lint:fix": "eslint --fix src --ext .ts,.tsx",
