@@ -123,7 +123,7 @@ B ⊇ A
 #### Proper subset
 A **proper subset** is when set A is a subset of B, but A ≠ B.
 ```text
-{1} ⊂ {3}
+{1} ⊂ {1, 3}
 ```
 
 #### Proper superset
