@@ -47,21 +47,21 @@ isSubsetOf(d, c); // true
 * <a href="#getOverlapCoefficient">#</a> similarity.**getOverlapCoefficient**<*TElement*>(*a*, *b*): *number* • [source](./src/similarity.ts)
 * <a href="#getSorensenDiceCoefficient">#</a> similarity.**getSorensenDiceCoefficient**<*TElement*>(*a*, *b*): *number* • [source](./src/similarity.ts)
 
-## Set Theory 101
-### Cardinality
+### Set Theory 101
+#### Cardinality
 The formal term that represents the number of elements within a set. It is also known as the "*size*" of the element. Given a set named A, the cardinality can be expressed using pipes, via |A|.
 ```text
  A = {"hello", "world"}
 |A| = 2
 ```
-### Disjoint sets
+#### Disjoint sets
 Sets that have no elements in common. They are formally expressed as `A ∩ B = ϕ`.
 ```text
 A = {1, 2, 3, 4}
 B = {5, 6, 7, 8}
 A ∩ B = ϕ
 ```
-### Equivalent sets
+#### Equivalent sets
 **Equivalent sets** are two sets that have the same cardinality.
 ```text
  A = {5, 6, 7, 8, 9, 10}
@@ -75,45 +75,45 @@ A = {1, 2, 3}
 B = {1, 2, 3, 4, 5}
 A ⊆ B
 ```
-### Superset
+#### Superset
 A **superset** is a set where all elements of B are in set A.
 ```text
 A = {4, 5, 6}
 B = {5, 6, 7, 8, 9}
 B ⊇ A
 ```
-### Proper subset
-A **proper subset** is when set A is a subset of B, but A != B.
+#### Proper subset
+A **proper subset** is when set A is a subset of B, but A ≠ B.
 ```text
 {1} ⊂ {3}
 ```
 ### Proper superset
-A **proper superset** is when set A is a superset of B, but A != B.
+A **proper superset** is when set A is a superset of B, but A ≠ B.
 ```text
 {2, 3, 9} ⊃ {3, 9}
 ```
-### Intersection
+#### Intersection
 The **intersection** is the set of elements that are the members of two sets.
 ```text
 A = {1, 2, 3, 4, 5}
 B = {3, 4, 5, 6, 7}
 A ∩ B = {3, 4, 5}
 ```
-### Union
+#### Union
 The **union** is the set of all elements in a collection of sets.
 ```text
 A = {1, 2, 3, 4}
 B = {4, 5, 6, 7, 8}
 A ∪ B = {1, 2, 3, 4, 5, 6, 7, 8}
 ```
-### Difference
+#### Difference
 The **difference** (also known as the complement) is the set of all elements that are in set A that are not in set B.
 ```text
 A = {1, 2, 3, 4}
 B = {2, 3, 5, 6}
 A \ B = {1, 4}
 ```
-### Symmetric difference
+#### Symmetric difference
 The **symmetric difference** is the set that belongs to one but not both of two sets.
 ```text
 A = {2, 4, 5, 8}
@@ -121,7 +121,7 @@ B = {2, 6, 7, 8}
 A △ B = {4, 5, 6, 7}
 ```
 
-## Symbols
+### Symbols
 | Character | Code point | Name                  |
 |-----------|------------|-----------------------|
 | `⊆`       | `U+2286`   | Subset                |
