@@ -3,6 +3,7 @@
 [![npm version](https://badge.fury.io/js/@neoncitylights%2Fset-theory.svg)](https://badge.fury.io/js/@neoncitylights%2Fset-theory)
 [![codecov](https://codecov.io/gh/neoncitylights/ts-set-theory/branch/main/graph/badge.svg?token=PmaGuYKnEo)](https://codecov.io/gh/neoncitylights/ts-set-theory)
 [![Node.js workflow](https://github.com/neoncitylights/ts-set-theory/actions/workflows/main.yml/badge.svg)](https://github.com/neoncitylights/ts-set-theory/actions/workflows/main.yml)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fneoncitylights%2Fts-set-theory.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fneoncitylights%2Fts-set-theory?ref=badge_shield)
 
 A library written in TypeScript implementing the mathematical branch known as set theory - a subset of discrete mathematics.
 
@@ -203,3 +204,6 @@ This library is licensed under the [MIT License](./LICENSE).
 [^ecma-spec]: TC39. (2021, October 30). Draft ECMA-262 / October 30, 2021. ECMAScript® 2022 Language&nbsp;Specification. Retrieved November 1, 2021, from https://tc39.es/ecma262/#sec-set-objects. 
 [^ecma-set-methods-proposal]: Wadas, M., &amp; Gunasekaran, S. (n.d.). New Set methods. New set methods. Retrieved November 1, 2021, from https://tc39.es/proposal-set-methods/. 
 [^rigour-wiki]: Wikipedia contributors. (2021, November 1). Rigour. In Wikipedia, The Free Encyclopedia. Retrieved 17:24, November 1, 2021, from https://en.wikipedia.org/w/index.php?title=Rigour&oldid=1053055627
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fneoncitylights%2Fts-set-theory.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fneoncitylights%2Fts-set-theory?ref=badge_large)
