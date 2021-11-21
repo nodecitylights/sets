@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+	target: 'node',
 	entry: './src/index.ts',
 	devtool: 'inline-source-map',
 	mode: 'production',
@@ -19,5 +20,11 @@ module.exports = {
 	output: {
 		filename: 'bundle.js',
 		path: path.resolve(__dirname, 'dist'),
+		globalObject: 'this',
+		clean: true,
+		library: {
+			name: 'neoncitylights-set-theory',
+			type: 'umd'
+		},
 	},
 }
