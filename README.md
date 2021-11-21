@@ -1,9 +1,9 @@
 # @neoncitylights/set-theory
-[![GitHub license](https://img.shields.io/github/license/neoncitylights/ts-set-theory)](https://github.com/neoncitylights/ts-set-theory/blob/main/LICENSE.txt)
+[![GitHub license](https://img.shields.io/github/license/samantha-labs/ts-set-theory)](https://github.com/samantha-labs/ts-set-theory/blob/main/LICENSE.txt)
 [![npm version](https://badge.fury.io/js/@neoncitylights%2Fset-theory.svg)](https://badge.fury.io/js/@neoncitylights%2Fset-theory)
-[![codecov](https://codecov.io/gh/neoncitylights/ts-set-theory/branch/main/graph/badge.svg?token=PmaGuYKnEo)](https://codecov.io/gh/neoncitylights/ts-set-theory)
-[![Node.js workflow](https://github.com/neoncitylights/ts-set-theory/actions/workflows/main.yml/badge.svg)](https://github.com/neoncitylights/ts-set-theory/actions/workflows/main.yml)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fneoncitylights%2Fts-set-theory.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fneoncitylights%2Fts-set-theory?ref=badge_shield)
+[![codecov](https://codecov.io/gh/samantha-labs/ts-set-theory/branch/main/graph/badge.svg?token=PmaGuYKnEo)](https://codecov.io/gh/samantha-labs/ts-set-theory)
+[![Node.js workflow](https://github.com/samantha-labs/ts-set-theory/actions/workflows/main.yml/badge.svg)](https://github.com/samantha-labs/ts-set-theory/actions/workflows/main.yml)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsamantha-labs%2Fts-set-theory.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsamantha-labs%2Fts-set-theory?ref=badge_shield)
 
 A library written in TypeScript implementing the mathematical branch known as set theory - a subset of discrete mathematics.
 
@@ -28,7 +28,7 @@ isSubsetOf(d, c); // true
 ```
 
 ## Documentation
-[Auto-generated API documentation is available](https://neoncitylights.github.io/ts-set-theory/).
+[Auto-generated API documentation is available](https://samantha-labs.github.io/ts-set-theory/).
 
 ### API Reference
 #### Predicates
