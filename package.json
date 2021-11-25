@@ -21,7 +21,7 @@
 		"type": "individual",
 		"url": "https://github.com/sponsors/neoncitylights"
 	},
-	"main": "./dist/index.js",
+	"main": "./dist/bundle.js",
 	"types": "./dist/index.d.ts",
 	"files": [
 		"dist/**/*"
