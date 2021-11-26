@@ -8,14 +8,17 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      time: "07:00"
     commit-message:
       prefix: "npm"
       include: "scope"
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      time: "07:00"
     commit-message:
       prefix: "gh-actions"
       include: "scope"
