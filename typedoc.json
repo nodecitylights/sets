@@ -2,5 +2,7 @@
 	"entryPoints": [
 		"src/index.ts"
 	],
-	"out": "docs/typedocs"
+	"out": "docs/typedocs",
+	"lightHighlightTheme": "github-light",
+	"darkHighlightTheme": "github-dark"
 }
