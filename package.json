@@ -50,7 +50,7 @@
 		"@typescript-eslint/eslint-plugin": "5.26.0",
 		"@typescript-eslint/parser": "5.26.0",
 		"eslint": "8.16.0",
-		"eslint-plugin-jest": "26.2.2",
+		"eslint-plugin-jest": "26.3.0",
 		"gh-pages": "4.0.0",
 		"jest": "28.1.0",
 		"ts-jest": "28.0.3",
