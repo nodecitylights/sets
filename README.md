@@ -61,118 +61,154 @@ This library provides [generic types](./src/types.ts) for describing different t
 
 ### Set Theory 101
 #### Set
-A **set** is an unordered collection of unique elements. The type of elements can be anything, such as words, numbers, and even other sets. In math, the name of sets are usually denoted with a capital letter, like A, B, C, etc. They can be expressed in namely 2 different notations being "**Roster notation**" and "**Set-Builder notation**".
+A **set** is an unordered collection of unique elements. The type of elements can be anything, such as words, numbers, and even other sets. In math, the name of sets are usually denoted with a capital letter, like $A$, $B$, $C$, etc. They can be expressed in namely 2 different notations being "**Roster notation**" and "**Set-Builder notation**".
 #### Roster notation
 Sets are written with curly brackets at the start and end, and each element is separated by a comma.
-```text
-A = {1, 2, 3, 4}
-```
+$$A = \\{1, 2, 3, 4\\}$$
+
 For expressing larger, finite sets, we can use an ellipsis in-between. They can also be at the beginning or end to indicate that the set is infinite.
-```
-B = {1, 2, 3, …, 100}
-C = {1, 3, 5, 7, 9, …}
-```
+
+$$
+\begin{aligned}
+B &= \\{ 1, 2, 3, \dots, 100 \\} \\
+C &= \\{ 1, 3, 5, 7, 9, \dots \\}
+\end{aligned}
+$$
 
 #### Set-builder notation
 Sets are written by defining a variable, and declaring a predicate (a statement that must be true or false) for that variable.
-For example, to express `{0, 1, 2, 3, …, 10}` in set-builder notation:
-```text
-{x|x ∈ ℤ & 0 ≤ x ≤ 10}
-```
-To express `{1, 3, 5, 7, 9, …}` in set-builder notation:
-```
-{x|x = x + 2, 1 ≤ x ≤ ∞}
-```
+For example, to express $\\{ 0, 1, 2, 3, \dots, 10 \\}$ in set-builder notation:
+
+$$\\{ x|x \in \mathbb{Z} \land 0 \leq x \leq 10 \\}$$
+
+To express $\\{ 1, 3, 5, 7, 9, \dots \\}$ in set-builder notation:
+
+$$\\{ x| x_n = n + 2, 1 \le x \le \infty \\}$$
+
 Compared to roster notation, set-builder notation is a way of more *rigorously*[^rigour-wiki] defining a set. However, it is important to note that depending on the audience, it can be less accessible to readers.
 
 #### Cardinality
-**Cardinality** is the formal term that represents the number of elements within a set. It is also known as the "*size*" of the element. Given a set named A, the cardinality can be expressed using pipes, via |A|.
-```text
- A = {hello, world}
-|A| = 2
-```
+**Cardinality** is the formal term that represents the number of elements within a set. It is also known as the "*size*" of the element. Given a set named $A$, the cardinality can be expressed using pipes, via $|A|$.
+
+$$
+\begin{aligned}
+A &= \\{ \text{hello}, \text{world} \\} \\
+|A| &= 2
+\end{aligned}
+$$
+
 #### Disjoint sets
-**Disjoint sets** are sets that have no elements in common. Given two sets named A and B, they are formally expressed as `A ∩ B = ϕ`.
-```text
-A = {1, 2, 3, 4}
-B = {5, 6, 7, 8}
-A ∩ B = ϕ
-```
+**Disjoint sets** are sets that have no elements in common. Given two sets named $A$ and $B$, they are formally expressed as $A \cap B = \Phi$.
+
+$$
+\begin{aligned}
+A &= \\{ 1, 2, 3, 4 \\} \\
+B &= \\{ 5, 6, 7, 8 \\} \\
+A \cap B &= \Phi
+\end{aligned}
+$$
 
 #### Equivalent sets
 **Equivalent sets** are two sets that have the same cardinality.
-```text
- A = {5, 6, 7, 8, 9, 10}
- B = {11, 12, 13, 14, 15, 16}
-|A| = |B|
-```
+
+$$
+\begin{aligned}
+A &= \\{ 5, 6, 7, 8, 9, 10 \\} \\
+B &= \\{ 11, 12, 13, 14, 15, 16 \\} \\
+|A| &= |B|
+\end{aligned}
+$$
 
 #### Equal sets
 **Equal sets** are sets that have the same cardinality *and* the same elements.
-```text
-A = {1, 2, 3, 4, 5}
-B = {1, 2, 3, 4, 5}
-A = B
-```
+
+$$
+\begin{aligned}
+A &= \\{ 1, 2, 3, 4, 5 \\} \\
+B &= \\{ 1, 2, 3, 4, 5 \\} \\
+A &= B
+\end{aligned}
+$$
 
 #### Subset
-A **subset** is a set where all elements of set A are in set B.
-```text
-A = {1, 2, 3}
-B = {1, 2, 3, 4, 5}
-A ⊆ B
-```
+A **subset** is a set where all elements of set $A$ are in set $B$.
+
+$$
+\begin{aligned}
+A &= \\{ 1, 2, 3 \\} \\
+B &= \\{ 1, 2, 3, 4, 5 \\} \\
+A &\subseteq B
+\end{aligned}
+$$
 
 #### Superset
-A **superset** is a set where all elements of B are in set A.
-```text
-A = {4, 5, 6}
-B = {5, 6, 7, 8, 9}
-B ⊇ A
-```
+A **superset** is a set where all elements of $B$ are in set $A$.
+
+$$
+\begin{aligned}
+A &= \\{ 4, 5, 6 \\} \\
+B &= \\{ 5, 6, 7, 8, 9 \\} \\
+B &\supseteq A
+\end{aligned}
+$$
+
 #### Proper subset
-A **proper subset** is when set A is a subset of B, but A ≠ B.
-```text
-{1} ⊂ {1, 3}
-```
+A **proper subset** is when set $A$ is a subset of $B$, but $A \neq B$.
+
+$$
+\\{ 1 \\} \subset \\{ 1, 3 \\}
+$$
 
 #### Proper superset
-A **proper superset** is when set A is a superset of B, but A ≠ B.
-```text
-{2, 3, 9} ⊃ {3, 9}
-```
+A **proper superset** is when set $A$ is a superset of $B$, but $A \neq B$.
+
+$$
+\\{ 2, 3, 9 \\} \supset \\{ 3, 9 \\}
+$$
 
 #### Intersection
 The **intersection** is the set of elements that are the members of two sets.
-```text
-A = {1, 2, 3, 4, 5}
-B = {3, 4, 5, 6, 7}
-A ∩ B = {3, 4, 5}
-```
+
+$$
+\begin{aligned}
+A &= \\{ 1, 2, 3, 4, 5 \\} \\
+B &= \\{ 3, 4, 5, 6, 7 \\} \\
+A \cap B &= \\{ 3, 4, 5 \\}
+\end{aligned}
+$$
 
 #### Union
 The **union** is the set of all elements in a collection of sets.
-```text
-A = {1, 2, 3, 4}
-B = {4, 5, 6, 7, 8}
-A ∪ B = {1, 2, 3, 4, 5, 6, 7, 8}
-```
+
+$$
+\begin{aligned}
+A &= \\{ 1, 2, 3, 4 \\} \\
+B &= \\{ 4, 5, 6, 7, 8 \\} \\
+A \cup B &= \\{1, 2, 3, 4, 5, 6, 7, 8 \\}
+\end{aligned}
+$$
 
 #### Difference
 The **difference** (also known as the complement) is the set of all elements that are in set A that are not in set B.
-```text
-A = {1, 2, 3, 4}
-B = {2, 3, 5, 6}
-A \ B = {1, 4}
-```
+
+$$
+\begin{aligned}
+A &= \\{ 1, 2, 3, 4 \\} \\
+B &= \\{ 2, 3, 5, 6 \\} \\
+A \setminus B &= \\{ 1, 4 \\}
+\end{aligned}
+$$
 
 #### Symmetric difference
 The **symmetric difference** is the set that belongs to one but not both of two sets.
-```text
-A = {2, 4, 5, 8}
-B = {2, 6, 7, 8}
-A △ B = {4, 5, 6, 7}
-```
+
+$$
+\begin{aligned}
+A &= \\{ 2, 4, 5, 8 \\} \\
+B &= \\{ 2, 6, 7, 8 \\} \\
+A ~\Delta ~ B &= \\{ 4, 5, 6, 7 \\}
+\end{aligned}
+$$
 
 ### Symbols
 | Character | Code point | Name                          |
