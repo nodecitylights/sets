@@ -32,25 +32,31 @@ isSubsetOf(d, c); // true
 
 ### API Reference
 #### Predicates
-* <a href="#areSetsDisjoint">#</a> predicates.**areSetsDisjoint**<*TElement*>(*a*, *b*): *boolean* • [source](./src/predicates.ts)
-* <a href="#areSetsEquivalent">#</a> predicates.**areSetsEquivalent**<*TElement*>(*a*, *b*): *boolean* • [source](./src/predicates.ts)
-* <a href="#areSetsEqual">#</a> predicates.**areSetsEqual**<*TElement*>(*a*, *b*): *boolean* • [source](./src/predicates.ts)
-* <a href="#isSubsetOf">#</a> predicates.**isSubsetOf**<*TElement*>(*a*, *b*): *boolean* • [source](./src/predicates.ts)
-* <a href="#isSupersetOf">#</a> predicates.**isSupersetOf**<*TElement*>(*a*, *b*): *boolean* • [source](./src/predicates.ts)
-* <a href="#isProperSubsetOf">#</a> predicates.**isProperSubsetOf**<*TElement*>(*a*, *b*): *boolean* • [source](./src/predicates.ts)
-* <a href="#isProperSupersetOf">#</a> predicates.**isProperSupersetOf**<*TElement*>(*a*, *b*): *boolean* • [source](./src/predicates.ts)
+* `fn`: <a href="#areSetsDisjoint">#</a> predicates.**areSetsDisjoint**<*TElement*>(*a*, *b*): *boolean* • [source](./src/predicates.ts)
+* `fn`: <a href="#areSetsEquivalent">#</a> predicates.**areSetsEquivalent**<*TElement*>(*a*, *b*): *boolean* • [source](./src/predicates.ts)
+* `fn`: <a href="#areSetsEqual">#</a> predicates.**areSetsEqual**<*TElement*>(*a*, *b*): *boolean* • [source](./src/predicates.ts)
+* `fn`: <a href="#isSubsetOf">#</a> predicates.**isSubsetOf**<*TElement*>(*a*, *b*): *boolean* • [source](./src/predicates.ts)
+* `fn`: <a href="#isSupersetOf">#</a> predicates.**isSupersetOf**<*TElement*>(*a*, *b*): *boolean* • [source](./src/predicates.ts)
+* `fn`: <a href="#isProperSubsetOf">#</a> predicates.**isProperSubsetOf**<*TElement*>(*a*, *b*): *boolean* • [source](./src/predicates.ts)
+* `fn`: <a href="#isProperSupersetOf">#</a> predicates.**isProperSupersetOf**<*TElement*>(*a*, *b*): *boolean* • [source](./src/predicates.ts)
 
 #### Operations
-* <a href="#getUnion">#</a> operations.**getUnion**<*TElement*>(*a*, *b*): Set<*TElement*> • [source](./src/operations.ts)
-* <a href="#getIntersection">#</a> operations.**getIntersection**<*TElement*>(*a*, *b*): Set<*TElement*> • [source](./src/operations.ts)
-* <a href="#getDifference">#</a> operations.**getDifference**<*TElement*>(*a*, *b*): Set<*TElement*> • [source](./src/operations.ts)
-* <a href="#getSymmetricDifference">#</a> operations.**getSymmetricDifference**<*TElement*>(*a*, *b*): Set<*TElement*> • [source](./src/operations.ts)
+* `fn`: <a href="#getUnion">#</a> operations.**getUnion**<*TElement*>(*a*, *b*): Set<*TElement*> • [source](./src/operations.ts)
+* `fn`: <a href="#getIntersection">#</a> operations.**getIntersection**<*TElement*>(*a*, *b*): Set<*TElement*> • [source](./src/operations.ts)
+* `fn`: <a href="#getDifference">#</a> operations.**getDifference**<*TElement*>(*a*, *b*): Set<*TElement*> • [source](./src/operations.ts)
+* `fn`: <a href="#getSymmetricDifference">#</a> operations.**getSymmetricDifference**<*TElement*>(*a*, *b*): Set<*TElement*> • [source](./src/operations.ts)
 
 #### Similarity measuring algorithms
-* <a href="#getJaccardSimilarityCoefficient">#</a> similarity.**getJaccardSimilarityCoefficient**<*TElement*>(*a*, *b*): *number* • [source](./src/similarity.ts)
-* <a href="#getLogDice">#</a> similarity.**getLogDice**<*TElement*>(*a*, *b*): *number* • [source](./src/similarity.ts)
-* <a href="#getOverlapCoefficient">#</a> similarity.**getOverlapCoefficient**<*TElement*>(*a*, *b*): *number* • [source](./src/similarity.ts)
-* <a href="#getSorensenDiceCoefficient">#</a> similarity.**getSorensenDiceCoefficient**<*TElement*>(*a*, *b*): *number* • [source](./src/similarity.ts)
+* `fn`: <a href="#getJaccardSimilarityCoefficient">#</a> similarity.**getJaccardSimilarityCoefficient**<*TElement*>(*a*, *b*): *number* • [source](./src/similarity.ts)
+* `fn`: <a href="#getLogDice">#</a> similarity.**getLogDice**<*TElement*>(*a*, *b*): *number* • [source](./src/similarity.ts)
+* `fn`: <a href="#getOverlapCoefficient">#</a> similarity.**getOverlapCoefficient**<*TElement*>(*a*, *b*): *number* • [source](./src/similarity.ts)
+* `fn`: <a href="#getSorensenDiceCoefficient">#</a> similarity.**getSorensenDiceCoefficient**<*TElement*>(*a*, *b*): *number* • [source](./src/similarity.ts)
+
+#### Types
+* `T`: <a href="#SetFunction">#</a> types.**SetFunction**<*TElement*, *TResult*> • [source](./src/types.ts)
+* `T`: <a href="#SetOperation">#</a> types.**SetOperation**<*TElement*> • [source](./src/types.ts)
+* `T`: <a href="#SetPredicate">#</a> types.**SetPredicate**<*TElement*> • [source](./src/types.ts)
+* `T`: <a href="#SetSimilarity">#</a> types.**SetSimilarity**<*TElement*> • [source](./src/types.ts)
 
 #### Types
 This library provides [generic types](./src/types.ts) for describing different types of set functions via:
