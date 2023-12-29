@@ -23,11 +23,23 @@
 	},
 	"type": "module",
 	"types": "./dist/index.d.ts",
-	"module": "./dist/sets.mjs",
+	"module": "./dist/index.mjs",
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"import": "./dist/sets.mjs"
+			"import": "./dist/index.mjs"
+		},
+		"./ops": {
+			"types": "./dist/operations.d.ts",
+			"import": "./dist/operations.mjs"
+		},
+		"./predicates": {
+			"types": "./dist/predicates.d.ts",
+			"import": "./dist/predicates.mjs"
+		},
+		"./similarity": {
+			"types": "./dist/similarity.d.ts",
+			"import": "./dist/similarity.mjs"
 		}
 	},
 	"files": [
