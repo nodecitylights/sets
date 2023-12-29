@@ -1,8 +1,0 @@
-{
-	"entryPoints": [
-		"src/index.ts"
-	],
-	"out": "docs/typedocs",
-	"lightHighlightTheme": "github-light",
-	"darkHighlightTheme": "github-dark"
-}
