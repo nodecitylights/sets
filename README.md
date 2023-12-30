@@ -1,8 +1,8 @@
-# @neoncitylights/set-theory
+# @neoncitylights/sets
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-[![npm (scoped)](https://img.shields.io/npm/v/@neoncitylights/set-theory?style=flat-square)](https://www.npmjs.com/package/@neoncitylights/set-theory)
-[![Codecov](https://img.shields.io/codecov/c/github/neoncitylights/ts-set-theory?style=flat-square&logo=codecov&logoColor=%23fff)](https://codecov.io/gh/neoncitylights/ts-set-theory)
-[![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/neoncitylights/ts-set-theory/.github%2Fworkflows%2Fmain.yml?style=flat-square)](https://github.com/neoncitylights/ts-set-theory/actions/workflows/main.yml)
+[![npm (scoped)](https://img.shields.io/npm/v/@neoncitylights/sets?style=flat-square)](https://www.npmjs.com/package/@neoncitylights/sets)
+[![Codecov](https://img.shields.io/codecov/c/github/neoncitylights/ts-sets?style=flat-square&logo=codecov&logoColor=%23fff)](https://codecov.io/gh/neoncitylights/ts-sets)
+[![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/neoncitylights/ts-sets/.github%2Fworkflows%2Fmain.yml?style=flat-square)](https://github.com/neoncitylights/ts-sets/actions/workflows/main.yml)
 
 A library written in TypeScript implementing the mathematical branch known as set theory - a subset of discrete mathematics.
 
@@ -10,7 +10,7 @@ While there is a current proposal for adding new methods to the Set class, it is
 
 ## Install
 ```bash
-npm install @neoncitylights/set-theory
+npm install @neoncitylights/sets
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ isSubsetOf(d, c); // true
 ```
 
 ## Documentation
-[Auto-generated API documentation is available](https://neoncitylights.github.io/ts-set-theory/).
+[Auto-generated API documentation is available](https://neoncitylights.github.io/ts-sets/).
 
 ### API Reference
 #### Predicates
