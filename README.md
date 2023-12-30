@@ -1,13 +1,12 @@
 # @neoncitylights/set-theory
-[![GitHub license](https://img.shields.io/github/license/samantha-labs/ts-set-theory)](https://github.com/samantha-labs/ts-set-theory/blob/main/LICENSE.txt)
-[![npm version](https://badge.fury.io/js/@neoncitylights%2Fset-theory.svg)](https://badge.fury.io/js/@neoncitylights%2Fset-theory)
-[![codecov](https://codecov.io/gh/samantha-labs/ts-set-theory/branch/main/graph/badge.svg?token=PmaGuYKnEo)](https://codecov.io/gh/samantha-labs/ts-set-theory)
-[![Node.js workflow](https://github.com/samantha-labs/ts-set-theory/actions/workflows/main.yml/badge.svg)](https://github.com/samantha-labs/ts-set-theory/actions/workflows/main.yml)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsamantha-labs%2Fts-set-theory.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsamantha-labs%2Fts-set-theory?ref=badge_shield)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![npm (scoped)](https://img.shields.io/npm/v/@neoncitylights/set-theory?style=flat-square)](https://www.npmjs.com/package/@neoncitylights/set-theory)
+[![Codecov](https://img.shields.io/codecov/c/github/neoncitylights/ts-set-theory?style=flat-square&logo=codecov&logoColor=%23fff)](https://codecov.io/gh/neoncitylights/ts-set-theory)
+[![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/neoncitylights/ts-set-theory/.github%2Fworkflows%2Fmain.yml?style=flat-square)](https://github.com/neoncitylights/ts-set-theory/actions/workflows/main.yml)
 
 A library written in TypeScript implementing the mathematical branch known as set theory - a subset of discrete mathematics.
 
-While there is a current proposal for adding new methods to the Set class[^ecma-set-methods-proposal], it is not formally recommended yet. This library provides functions to coincide with the `Set` class[^mdn-set], as standardized by the *ECMAScript Language Specification*. [^ecma-spec].
+While there is a current proposal for adding new methods to the Set class, it is not formally recommended yet. This library provides functions to coincide with the `Set` class, as standardized by the *ECMAScript Language Specification*.
 
 ## Install
 ```bash
@@ -28,7 +27,7 @@ isSubsetOf(d, c); // true
 ```
 
 ## Documentation
-[Auto-generated API documentation is available](https://samantha-labs.github.io/ts-set-theory/).
+[Auto-generated API documentation is available](https://neoncitylights.github.io/ts-set-theory/).
 
 ### API Reference
 #### Predicates
@@ -57,13 +56,6 @@ isSubsetOf(d, c); // true
 * `T`: <a href="#SetOperation">#</a> types.**SetOperation**<*TElement*> • [source](./src/types.ts)
 * `T`: <a href="#SetPredicate">#</a> types.**SetPredicate**<*TElement*> • [source](./src/types.ts)
 * `T`: <a href="#SetSimilarity">#</a> types.**SetSimilarity**<*TElement*> • [source](./src/types.ts)
-
-#### Types
-This library provides [generic types](./src/types.ts) for describing different types of set functions via:
-* **SetFunction**<*TElement*>
-* **SetOperation**<*TElement*>
-* **SetPredicate**<*TElement*>
-* **SetSimilarity**<*TElement*>
 
 ### Set Theory 101
 #### Set
@@ -216,35 +208,10 @@ A ~\Delta ~ B &= \\{ 4, 5, 6, 7 \\}
 \end{aligned}
 $$
 
-### Symbols
-| Character | Code point | Name                          |
-|-----------|------------|-------------------------------|
-| `⊆`       | `U+2286`   | Subset                        |
-| `⊇`       | `U+2287`   | Superset                      |
-| `⊂`       | `U+2282`   | Proper subset                 |
-| `⊃`       | `U+2283`   | Proper superset               |
-| `∅`       | `U+03D5`   | Empty set                     |
-| `∈`       | `U+2208`   | Element of                    |
-| `∉`       | `U+2209`   | Not element of                |
-| `∩`       | `U+2229`   | Intersection                  |
-| `∪`       | `U+222A`   | Union                         |
-| `\`       | `U+005C`   | Complement/difference         |
-| `△`       | `U+25B3`   | Symmetric difference          |
-| `⊖`       | `U+2296`   | Symmetric difference          |
-| `×`       | `U+00D7`   | Cartesian product             |
-| `ℕ`       | `U+2115`   | Set of all natural numbers    |
-| `𝕎`       | `U+1D54E`  | Set of all whole numbers      |
-| `ℤ`       | `U+2124`   | Set of all integer numbers    |
-| `ℚ`       | `U+211A`   | Set of all rational numbers   |
-| `𝔽`       | `U+1D53D`  | Set of all irrational numbers |
-| `ℝ`       | `U+211D`   | Set of all real numbers       |
-| `ℂ`       | `U+2102`   | Set of all complex numbers    |
 ## License
-This library is licensed under the [MIT License](./LICENSE).
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsamantha-labs%2Fts-set-theory.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsamantha-labs%2Fts-set-theory?ref=badge_large)
+This library is licensed under the MIT license ([`LICENSE-MIT`](./LICENSE) or <http://opensource.org/licenses/MIT>).
 
-[^mdn-set]: MDN Web Docs Contributors. (n.d.). Set - javascript: MDN. JavaScript | MDN. Retrieved November 1, 2021, from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set. 
-[^ecma-spec]: TC39. (2021, October 30). Draft ECMA-262 / October 30, 2021. ECMAScript® 2022 Language&nbsp;Specification. Retrieved November 1, 2021, from https://tc39.es/ecma262/#sec-set-objects. 
-[^ecma-set-methods-proposal]: Wadas, M., &amp; Gunasekaran, S. (n.d.). New Set methods. New set methods. Retrieved November 1, 2021, from https://tc39.es/proposal-set-methods/. 
-[^rigour-wiki]: Wikipedia contributors. (2021, November 1). Rigour. In Wikipedia, The Free Encyclopedia. Retrieved 17:24, November 1, 2021, from https://en.wikipedia.org/w/index.php?title=Rigour&oldid=1053055627
+### Contribution
+
+Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the MIT license, shall be licensed as above, without any additional terms or conditions.
