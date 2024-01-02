@@ -52,7 +52,7 @@ export function areSetsDisjoint<TElement>(a: Set<TElement>, b: Set<TElement>): b
  * @returns Whether `A = B` is true
  */
 export function areSetsEqual<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
-	return areSetsEquivalent(a, b) && _containsAllElements(a, b);
+	return areSetsEquivalent(a, b) && containsAllElements(a, b);
 }
 
 /**
@@ -75,26 +75,6 @@ export function areSetsEquivalent<TElement>(a: Set<TElement>, b: Set<TElement>):
 }
 
 /**
- * Checks if all elements of set B are contained within
- * set B.
- *  - This method runs in bilinear time on average, or `O(n * m)`, where
- *    `n = |A|` (size of set A), and `m = |B|` (size of set B).
- *
- * @param a - Set A of type `<TElement>` elements
- * @param b - Set B of type `<TElement>` elements
- * @returns Whether A contains all elements of B
- */
-export function _containsAllElements<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
-	for (const element of b) {
-		if (!a.has(element)) {
-			return false;
-		}
-	}
-
-	return true;
-}
-
-/**
  * Implementation of the proper subset operation, which checks if
  * set A is a proper subset of set B. A proper subset means
  * a set A is a subset of B, but is not equal to B.
@@ -112,7 +92,7 @@ export function _containsAllElements<TElement>(a: Set<TElement>, b: Set<TElement
  * @returns Whether `A ⊂ B` is true
  */
 export function isProperSubsetOf<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
-	return a.size < b.size && _containsAllElements(b, a);
+	return a.size < b.size && containsAllElements(b, a);
 }
 
 /**
@@ -133,7 +113,7 @@ export function isProperSubsetOf<TElement>(a: Set<TElement>, b: Set<TElement>): 
  * @returns Whether `A ⊃ B` is true
  */
 export function isProperSupersetOf<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
-	return a.size > b.size && _containsAllElements(a, b);
+	return a.size > b.size && containsAllElements(a, b);
 }
 
 /**
@@ -155,7 +135,7 @@ export function isProperSupersetOf<TElement>(a: Set<TElement>, b: Set<TElement>)
  * @returns Whether `A ⊆ B` is true
  */
 export function isSubsetOf<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
-	return a.size <= b.size && _containsAllElements(b, a);
+	return a.size <= b.size && containsAllElements(b, a);
 }
 
 /**
@@ -177,5 +157,25 @@ export function isSubsetOf<TElement>(a: Set<TElement>, b: Set<TElement>): boolea
  * @returns Whether `A ⊇ B` is true
  */
 export function isSupersetOf<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
-	return a.size >= b.size && _containsAllElements(a, b);
+	return a.size >= b.size && containsAllElements(a, b);
+}
+
+/**
+ * Checks if all elements of set B are contained within
+ * set B.
+ *  - This method runs in bilinear time on average, or `O(n * m)`, where
+ *    `n = |A|` (size of set A), and `m = |B|` (size of set B).
+ *
+ * @param a - Set A of type `<TElement>` elements
+ * @param b - Set B of type `<TElement>` elements
+ * @returns Whether A contains all elements of B
+ */
+function containsAllElements<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
+	for (const element of b) {
+		if (!a.has(element)) {
+			return false;
+		}
+	}
+
+	return true;
 }
