@@ -4,13 +4,15 @@
  * - **Formal definition**: `A ∩ B = ϕ`
  * - This method runs in bilinear time, or `O(m * n)`,
  *   where `m = |B|` (size of set B) and `n = |A|` (size of set A).
+ * 
+ * @see [`Set.prototype.isDisjointFrom`](https://tc39.es/proposal-set-methods/#sec-set.prototype.isdisjointfrom)
  * @example
  * ```ts
  * // {1, 2, 3} ∩ {4, 5, 6} = ϕ
- * areSetsDisjoint(new Set([1, 2, 3]), new Set([4, 5, 6]); // true
+ * areSetsDisjoint(new Set([1, 2, 3]), new Set([4, 5, 6])); // true
  *
  * // {1, 2, 3} ∩ {3, 4, 5} ≠ ϕ
- * areSetsDisjoint(new Set([1, 2, 3]), new Set([3, 4, 5]); // false
+ * areSetsDisjoint(new Set([1, 2, 3]), new Set([3, 4, 5])); // false
  * ```
  * @param a - Set A of type `<TElement>` elements
  * @param b - Set B of type `<TElement>` elements
@@ -36,6 +38,7 @@ export function areSetsDisjoint<TElement>(a: Set<TElement>, b: Set<TElement>): b
  *    (size of set A).
  *  - **Note**: This does not check for reference/entity equality,
  *    but rather value equality.
+ * 
  * @example
  * ```ts
  * // {1, 2, 3, 4} = {1, 2, 3, 4}
@@ -49,7 +52,7 @@ export function areSetsDisjoint<TElement>(a: Set<TElement>, b: Set<TElement>): b
  * @returns Whether `A = B` is true
  */
 export function areSetsEqual<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
-	return areSetsEquivalent(a, b) && _containsAllElements(a, b);
+	return areSetsEquivalent(a, b) && containsAllElements(a, b);
 }
 
 /**
@@ -57,6 +60,7 @@ export function areSetsEqual<TElement>(a: Set<TElement>, b: Set<TElement>): bool
  * the size of the two sets to see if they are equal.
  *  - **Formal definition**: `|A| = |B|`
  *  - This method runs in *constant time*, or `O(1)`.
+ *
  * @example
  * ```ts
  * // |{A, B, C}| = |{D, E, F}|
@@ -71,31 +75,13 @@ export function areSetsEquivalent<TElement>(a: Set<TElement>, b: Set<TElement>):
 }
 
 /**
- * Checks if all elements of set B are contained within
- * set B.
- *  - This method runs in bilinear time on average, or `O(n * m)`, where
- *    `n = |A|` (size of set A), and `m = |B|` (size of set B).
- * @param a - Set A of type `<TElement>` elements
- * @param b - Set B of type `<TElement>` elements
- * @returns Whether A contains all elements of B
- */
-export function _containsAllElements<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
-	for (const element of b) {
-		if (!a.has(element)) {
-			return false;
-		}
-	}
-
-	return true;
-}
-
-/**
  * Implementation of the proper subset operation, which checks if
  * set A is a proper subset of set B. A proper subset means
  * a set A is a subset of B, but is not equal to B.
  *  - **Formal definition**: `A ⊂ B`
  *  - This method runs in bilinear time, or `O(n * m)`, where `n = |A|`
  *    (size of set A), and `m = |B|` (set of size B)
+ *
  * @example
  * ```ts
  * // {1} ⊂ {1, 3}
@@ -106,7 +92,7 @@ export function _containsAllElements<TElement>(a: Set<TElement>, b: Set<TElement
  * @returns Whether `A ⊂ B` is true
  */
 export function isProperSubsetOf<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
-	return a.size < b.size && _containsAllElements(b, a);
+	return a.size < b.size && containsAllElements(b, a);
 }
 
 /**
@@ -116,6 +102,7 @@ export function isProperSubsetOf<TElement>(a: Set<TElement>, b: Set<TElement>): 
  *  - **Formal definition**: `A ⊃ B`
  *  - This method runs in bilinear time, or `O(n * m)`, where `n = |A|`
  *    (size of set A), and `m = |B|` (set of size B)
+ *
  * @example
  * ```ts
  * // {2, 3, 9} ⊃ {3, 9}
@@ -126,7 +113,7 @@ export function isProperSubsetOf<TElement>(a: Set<TElement>, b: Set<TElement>): 
  * @returns Whether `A ⊃ B` is true
  */
 export function isProperSupersetOf<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
-	return a.size > b.size && _containsAllElements(a, b);
+	return a.size > b.size && containsAllElements(a, b);
 }
 
 /**
@@ -136,6 +123,8 @@ export function isProperSupersetOf<TElement>(a: Set<TElement>, b: Set<TElement>)
  *  - **Formal definition**: `A ⊆ B`
  *  - This method runs in *linear time*, or `O(n)`, where `n = |A|`
  *    (size of set A).
+ *
+ * @see [`Set.prototype.isSubsetOf`](https://tc39.es/proposal-set-methods/#sec-set.prototype.issubsetof)
  * @example
  * ```ts
  * // {1} ⊂ {1, 3}
@@ -146,7 +135,7 @@ export function isProperSupersetOf<TElement>(a: Set<TElement>, b: Set<TElement>)
  * @returns Whether `A ⊆ B` is true
  */
 export function isSubsetOf<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
-	return a.size <= b.size && _containsAllElements(b, a);
+	return a.size <= b.size && containsAllElements(b, a);
 }
 
 /**
@@ -156,6 +145,8 @@ export function isSubsetOf<TElement>(a: Set<TElement>, b: Set<TElement>): boolea
  *  - **Formal definition**: `A ⊇ B`
  *  - This method runs in bilinear time, or `O(n * m)`, where `n = |A|`
  *    (size of set A), and `m = |B|` (set of size B)
+ *
+ * @see [`Set.prototype.isSupersetOf`](https://tc39.es/proposal-set-methods/#sec-set.prototype.issupersetof)
  * @example
  * ```ts
  * // {1, 2, 3} ⊇ {1, 2, 3}
@@ -166,5 +157,25 @@ export function isSubsetOf<TElement>(a: Set<TElement>, b: Set<TElement>): boolea
  * @returns Whether `A ⊇ B` is true
  */
 export function isSupersetOf<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
-	return a.size >= b.size && _containsAllElements(a, b);
+	return a.size >= b.size && containsAllElements(a, b);
+}
+
+/**
+ * Checks if all elements of set B are contained within
+ * set B.
+ *  - This method runs in bilinear time on average, or `O(n * m)`, where
+ *    `n = |A|` (size of set A), and `m = |B|` (size of set B).
+ *
+ * @param a - Set A of type `<TElement>` elements
+ * @param b - Set B of type `<TElement>` elements
+ * @returns Whether A contains all elements of B
+ */
+function containsAllElements<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
+	for (const element of b) {
+		if (!a.has(element)) {
+			return false;
+		}
+	}
+
+	return true;
 }
