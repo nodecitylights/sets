@@ -70,7 +70,7 @@ export function getIntersection<TElement>(a: Set<TElement>, b: Set<TElement>): S
  * @example
  * ```
  * // {1, 2, 3, 4, 5} △ {2, 4, 6} = {1, 3, 5, 6}
- * getSymmetricDifference(new Set([1, 2, 3, 4, 5]), new Set([2, 4, 6]); // new Set([1, 3, 5, 6])
+ * getSymmetricDifference(new Set([1, 2, 3, 4, 5]), new Set([2, 4, 6])); // new Set([1, 3, 5, 6])
  * ```
  * @param a - Set A of type `<TElement>` elements
  * @param b - Set B of type `<B>` elements
