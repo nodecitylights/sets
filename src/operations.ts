@@ -7,7 +7,7 @@
  *  - This method has *no side effects*, returning a new
  *    `Set<TElement>` instance.
  * 
- * @see [TC-39 set methods: `Set.prototype.difference`](https://tc39.es/proposal-set-methods/#sec-set.prototype.difference)
+ * @see [`Set.prototype.difference`](https://tc39.es/proposal-set-methods/#sec-set.prototype.difference)
  * @example
  * ```ts
  * //{1, 2, 3} \ {3, 5} = {1, 2}
@@ -35,7 +35,7 @@ export function getDifference<TElement>(a: Set<TElement>, b: Set<TElement>): Set
  *  - This method has *no side effects*, returning a new
  *    `Set<TElement>` instance.
  * 
- * @see [TC-39 set methods: `Set.prototype.intersection`](https://tc39.es/proposal-set-methods/#sec-set.prototype.intersection)
+ * @see [`Set.prototype.intersection`](https://tc39.es/proposal-set-methods/#sec-set.prototype.intersection)
  * @example
  * ```ts
  * // {1, 2, 3, 4} ∩ {3, 4, 5, 6} = {3, 4}
@@ -66,7 +66,7 @@ export function getIntersection<TElement>(a: Set<TElement>, b: Set<TElement>): S
  * 	 - `A △ B = (A ∪ B) \ (B ∪ A)`: Difference of the unions of both sets
  *  - **Time complexity**:
  * 
- * @see [TC-39 set methods: `Set.prototype.symmetricDifference`](https://tc39.es/proposal-set-methods/#sec-set.prototype.symmetricdifference)
+ * @see [`Set.prototype.symmetricDifference`](https://tc39.es/proposal-set-methods/#sec-set.prototype.symmetricdifference)
  * @example
  * ```
  * // {1, 2, 3, 4, 5} △ {2, 4, 6} = {1, 3, 5, 6}
@@ -89,7 +89,7 @@ export function getSymmetricDifference<TElement>(a: Set<TElement>, b: Set<TEleme
  *  - This method has *no side effects*, returning a new
  *    `Set<TElement>` instance.
  * 
- * @see [TC-39 set methods: `Set.prototype.union`](https://tc39.es/proposal-set-methods/#sec-set.prototype.union)
+ * @see [`Set.prototype.union`](https://tc39.es/proposal-set-methods/#sec-set.prototype.union)
  * @example
  * ```ts
  * // {A, B, C} ∪ {E, F, G} = {A, B, C, D, E, F, G}
