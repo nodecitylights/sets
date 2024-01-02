@@ -9,10 +9,10 @@
  * @example
  * ```ts
  * // {1, 2, 3} ∩ {4, 5, 6} = ϕ
- * areSetsDisjoint(new Set([1, 2, 3]), new Set([4, 5, 6]); // true
+ * areSetsDisjoint(new Set([1, 2, 3]), new Set([4, 5, 6])); // true
  *
  * // {1, 2, 3} ∩ {3, 4, 5} ≠ ϕ
- * areSetsDisjoint(new Set([1, 2, 3]), new Set([3, 4, 5]); // false
+ * areSetsDisjoint(new Set([1, 2, 3]), new Set([3, 4, 5])); // false
  * ```
  * @param a - Set A of type `<TElement>` elements
  * @param b - Set B of type `<TElement>` elements
