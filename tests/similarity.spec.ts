@@ -1,6 +1,11 @@
 import { describe, expect, test } from 'vitest';
 
-import { getJaccardSimilarityCoefficient, getLogDice, getOverlapCoefficient, getSorensenDiceCoefficient } from '../src';
+import {
+	getJaccardSimilarityCoefficient,
+	getLogDice,
+	getOverlapCoefficient,
+	getSorensenDiceCoefficient,
+} from '../src';
 
 describe('Jaccard\'s Similarity Coefficient', () => {
 
