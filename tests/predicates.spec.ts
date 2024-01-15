@@ -4,11 +4,25 @@ import {
 	areSetsDisjoint,
 	areSetsEqual,
 	areSetsEquivalent,
+	containsAllElements,
 	isProperSubsetOf,
 	isProperSupersetOf,
 	isSubsetOf,
 	isSupersetOf,
 } from '../src';
+
+describe('containsAllElements', () => {
+	test.each([
+		[[1, 2, 3], [1, 2], true],
+		[[1, 2, 3], [], true],
+		[[1, 2, 3], [4], false],
+	])('%O contains %O is %O', (a, b, expected) => {
+		expect(containsAllElements(
+			new Set(a),
+			new Set(b),
+		)).toBe(expected);
+	});
+});
 
 describe('areSetsDisjoint', () => {
 	test.each([

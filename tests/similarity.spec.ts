@@ -8,22 +8,21 @@ import {
 } from '../src';
 
 describe('Jaccard\'s Similarity Coefficient', () => {
-
 	test.each([
-		['hello world', 'world hello', 1.0],
-		['', '', 1.0],
+		[[], [], 1],
+		[['hello', 'world'], ['world', 'hello'], 1],
 	])('comparing "%s" and "%s" will give a score of %f', (a, b, expected) => {
 		expect(getJaccardSimilarityCoefficient(
-			new Set(a.split(' ')),
-			new Set(b.split(' ')),
+			new Set(a),
+			new Set(b),
 		)).toBeCloseTo(expected);
 	});
 });
 
 describe('Pavel Rychlý\'s LogDice', () => {
 	test.each([
-		['hello world', 'world hello'],
 		['', ''],
+		['hello world', 'world hello'],
 	])('comparing "%s" and "%s" will give 14 for full similarity', (a, b) => {
 		expect(getLogDice(
 			new Set(a.split(' ')),
