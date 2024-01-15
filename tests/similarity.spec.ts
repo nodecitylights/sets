@@ -1,28 +1,32 @@
 import { describe, expect, test } from 'vitest';
 
-import { getJaccardSimilarityCoefficient, getLogDice, getOverlapCoefficient, getSorensenDiceCoefficient } from '../src';
+import {
+	getJaccardSimilarityCoefficient,
+	getLogDice,
+	getOverlapCoefficient,
+	getSorensenDiceCoefficient,
+} from '../src';
 
 describe('Jaccard\'s Similarity Coefficient', () => {
-	test('comparing "hello world" and "world hello" will result in 100% score', () => {
+	test.each([
+		[[], [], 1],
+		[['hello', 'world'], ['world', 'hello'], 1],
+	])('comparing "%s" and "%s" will give a score of %f', (a, b, expected) => {
 		expect(getJaccardSimilarityCoefficient(
-			new Set('hello world'.split(' ')),
-			new Set('world hello'.split(' ')),
-		)).toBeCloseTo(1.0);
-	});
-
-	test('two equal sets are equally similar', () => {
-		expect(getJaccardSimilarityCoefficient(
-			new Set([]),
-			new Set([]),
-		)).toBeCloseTo(1.0);
+			new Set(a),
+			new Set(b),
+		)).toBeCloseTo(expected);
 	});
 });
 
 describe('Pavel Rychlý\'s LogDice', () => {
-	test('getLogDice returns 14 for full similarity', () => {
+	test.each([
+		['', ''],
+		['hello world', 'world hello'],
+	])('comparing "%s" and "%s" will give 14 for full similarity', (a, b) => {
 		expect(getLogDice(
-			new Set('hello world'.split('')),
-			new Set('world hello'.split('')),
+			new Set(a.split(' ')),
+			new Set(b.split(' ')),
 		)).toBe(14);
 	});
 });

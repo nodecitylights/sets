@@ -170,7 +170,7 @@ export function isSupersetOf<TElement>(a: Set<TElement>, b: Set<TElement>): bool
  * @param b - Set B of type `<TElement>` elements
  * @returns Whether A contains all elements of B
  */
-function containsAllElements<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
+export function containsAllElements<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
 	for (const element of b) {
 		if (!a.has(element)) {
 			return false;
