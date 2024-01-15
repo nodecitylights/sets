@@ -1,87 +1,103 @@
 import { describe, expect, test } from 'vitest';
 
-import { areSetsDisjoint, areSetsEqual, areSetsEquivalent, isProperSubsetOf, isProperSupersetOf, isSubsetOf, isSupersetOf } from '../src';
+import {
+	areSetsDisjoint,
+	areSetsEqual,
+	areSetsEquivalent,
+	isProperSubsetOf,
+	isProperSupersetOf,
+	isSubsetOf,
+	isSupersetOf,
+} from '../src';
 
 describe('areSetsDisjoint', () => {
-	test('two sets are disjoint to each other', () => {
+	test.each([
+		[true, [], []],
+		[true, [1, 2, 3], [4, 5, 6]],
+		[false, [1, 2, 3], [3, 4, 5]],
+	])('A ∩ B = ϕ is %O, (A = %O, B = %O)', (expected, a, b) => {
 		expect(areSetsDisjoint(
-			new Set<number>([1, 2, 3]),
-			new Set<number>([4, 5, 6]),
-		)).toBe(true);
-	});
-
-	test('two sets are not disjoint to each other', () => {
-		expect(areSetsDisjoint(
-			new Set<number>([1, 2, 3]),
-			new Set<number>([3, 4, 5]),
-		)).toBe(false);
+			new Set<number>(a),
+			new Set<number>(b),
+		)).toBe(expected);
 	});
 });
 
 describe('areSetsEqual', () => {
-	test('two sets are equal to each other', () => {
+	test.each([
+		[true, [], []],
+		[true, [1, 2, 3, 4, 5], [1, 2, 3, 4, 5]],
+	])('A = B is %O, (A = %O, B = %O)', (expected, a, b) => {
 		expect(areSetsEqual(
-			new Set([1, 2, 3, 4, 5]),
-			new Set([1, 2, 3, 4, 5]),
-		)).toBe(true);
-	});
-    
-	test('two empty sets are equal to each other', () => {
-		expect(areSetsEqual<number>(
-			new Set<number>([]),
-			new Set<number>([]),
-		)).toBe(true);
+			new Set(a),
+			new Set(b),
+		)).toBe(expected);
 	});
 });
 
 describe('areSetsEquivalent', () => {
-	test('two empty sets are equivalent to each other', () => {
+	test.each([
+		[true, [], []],
+		[true, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]],
+		[false, [1, 2, 3], []],
+	])('|A| = |B| is %O, (A = %O, B = %O)', (expected, a, b) => {
 		expect(areSetsEquivalent<number>(
-			new Set<number>(),
-			new Set<number>(),
-		)).toBe(true);
-	});
-
-	test('two sets of same length are equivalent to each other', () => {
-		expect(areSetsEquivalent<number>(
-			new Set<number>([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
-			new Set<number>([11, 12, 13, 14, 15, 16, 17, 18, 19, 20]),
-		)).toBe(true);
+			new Set<number>(a),
+			new Set<number>(b),
+		)).toBe(expected);
 	});
 });
 
 describe('isProperSubsetOf', () => {
-	test('set A is correctly computed as a proper subset of set B', () => {
+	test.each([
+		[true, [1, 2, 3, 4, 5], [1, 2, 3, 4, 5, 6, 7, 8, 9]],
+		[false, [1, 2, 3], [1, 2, 3]],
+		[false, [], []],
+	])('A ⊂ B is %O, (A = %O, B = %O)', () => {
 		expect(isProperSubsetOf(
 			new Set([1, 2, 3, 4, 5]),
 			new Set([1, 2, 3, 4, 5, 6, 7, 8, 9]),
 		)).toBe(true);
-	});    
+	});
 });
 
 describe('isProperSupersetOf', () => {
-	test('set A is correctly defined as a proper superset of set B', () => {
+	test.each([
+		[true, [1, 2, 3, 4, 5, 6, 7, 8, 9], [1, 2, 3, 4, 5]],
+		[false, [1, 2, 3], [1, 2, 3]],
+		[false, [], []],
+	])('A ⊃ B is %O, (A = %O, B = %O)', (expected, a, b) => {
 		expect(isProperSupersetOf(
-			new Set([1, 2, 3, 4, 5, 6, 7, 8, 9]),
-			new Set([1, 2, 3, 4, 5]),
-		)).toBe(true);
-	});    
+			new Set(a),
+			new Set(b),
+		)).toBe(expected);
+	});
 });
 
 describe('isSubsetOf', () => {
-	test('set A is correctly defined as a subset of B', () => {
+	test.each([
+		[true, [1, 2, 3, 4, 5], [1, 2, 3, 4, 5, 9]],
+		[false, [1, 2, 3, 4, 5, 9], [1, 2, 3, 4, 5]],
+		[true, [1, 2, 3], [1, 2, 3]],
+		[true, [], []],
+	])('A ⊆ B is %O, (A = %O, B = %O)', (expected, a, b) => {
 		expect(isSubsetOf(
-			new Set([1, 2, 3, 4, 5]),
-			new Set([1, 2, 3, 4, 5, 9]),
-		)).toBe(true);
-	});    
+			new Set(a),
+			new Set(b),
+		)).toBe(expected);
+	});
 });
 
 describe('isSupersetOf', () => {
-	test('set A is a superset of set B', () => {
+	test.each([
+		[true, [1, 2, 3, 4, 5, 7], [1, 3, 7]],
+		[false, [1, 3, 7], [1, 2, 3, 4, 5, 7]],
+		[true, [1, 3, 7], [1, 3, 7]],
+		[true, [], []],
+	])('A ⊇ B is %O, (A = %O, B = %O) ', (expected, a, b) => {
 		expect(isSupersetOf(
-			new Set([1, 2, 3, 4, 5, 7]),
-			new Set([1, 3, 7]),
-		)).toBe(true);
-	});    
+			new Set(a),
+			new Set(b),
+		)).toBe(expected);
+	});
 });

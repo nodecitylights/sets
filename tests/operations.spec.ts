@@ -1,72 +1,67 @@
 import { describe, expect, test } from 'vitest';
 
-import { getDifference, getIntersection, getSymmetricDifference, getUnion } from '../src';
+import {
+	getDifference,
+	getIntersection,
+	getSymmetricDifference,
+	getUnion,
+} from '../src';
 
 describe('getDifference', () => {
-	test('difference of sets is computed correctly [1]', () => {
+	test.each([
+		[[], [], []],
+		[[1, 2, 3], [2, 3, 4], [1]],
+		[[1, 2, 3, 4, 5, 6, 7, 8], [1, 2, 3, 4], [5, 6, 7, 8]],
+	])('%O \\ %O = %O', (a, b, expected) => {
 		expect(getDifference(
-			new Set([1, 2, 3, 4, 5, 6, 7, 8]),
-			new Set([1, 2, 3, 4]),
-		)).toStrictEqual(new Set([5, 6, 7, 8]));
-	});
-    
-    
-	test('difference of two sets is computed correctly [2]', () => {
-		expect(getDifference(
-			new Set<number>([1, 2, 3]),
-			new Set<number>([2, 3, 4]),
-		)).toStrictEqual(
-			new Set<number>([1]),
-		);
+			new Set(a),
+			new Set(b),
+		)).toStrictEqual(new Set(expected));
 	});
 });
 
 describe('getIntersection', () => {
-	test('intersection of two sets is computed correctly [1]', () => {
+	test.each([
+		[[1, 2, 3], [4, 5, 6], []],
+		[[1, 2, 3], [2, 3, 4], [2, 3]],
+		[[8, 9, 10, 11, 12, 13, 14, 15], [14, 15, 16, 17, 18, 19, 20], [14, 15]],
+	])('%O ∩ %O = %O', (a, b, expected) => {
 		expect(getIntersection<number>(
-			new Set<number>([1, 2, 3]),
-			new Set<number>([2, 3, 4]),
+			new Set<number>(a),
+			new Set<number>(b),
 		)).toStrictEqual(
-			new Set<number>([2, 3]),
-		);
-	});
-    
-	test('intersection of two sets is computed correctly [2]', () => {
-		expect(getIntersection(
-			new Set([8, 9, 10, 11, 12, 13, 14, 15]),
-			new Set([14, 15, 16, 17, 18, 19, 20]),
-		)).toStrictEqual(new Set([14, 15]));
-	});
-    
-    
-	test('intersection of two sets without any common elements returns an empty set', () => {
-		expect(getIntersection<number>(
-			new Set<number>([1, 2, 3]),
-			new Set<number>([4, 5, 6]),
-		)).toStrictEqual(
-			new Set<number>([]),
+			new Set<number>(expected),
 		);
 	});
 });
 
 describe('getSymmetricDifference', () => {
-	test('symmetric difference of two sets is computed correctly', () => {
+	test.each([
+		[[], [], []],
+		[[1, 2, 3], [1, 2, 3], []],
+		[[1, 2, 3], [3, 4], [1, 2, 4]],
+		[[1, 2, 3], [4, 5, 6], [1, 2, 3, 4, 5, 6]],
+	])('%O △ %O = %O', (a, b, expected) => {
 		expect(getSymmetricDifference(
-			new Set<number>([1, 2, 3]),
-			new Set<number>([3, 4]),
+			new Set<number>(a),
+			new Set<number>(b),
 		)).toStrictEqual(
-			new Set<number>([1, 2, 4]),
+			new Set<number>(expected),
 		);
 	});
 });
 
 describe('getUnion', () => {
-	test('union of two sets is computed correctly', () => {
+	test.each([
+		[[], [], []],
+		[[1, 2, 3], [2, 3, 4], [1, 2, 3, 4]],
+		[[1, 2, 3, 4], [5, 6, 7, 8], [1, 2, 3, 4, 5, 6, 7, 8]],
+	])('%O ∪ %O = %O', (a, b, expected) => {
 		expect(getUnion<number>(
-			new Set<number>([1, 2, 3, 4]),
-			new Set<number>([5, 6, 7, 8]),
+			new Set<number>(a),
+			new Set<number>(b),
 		)).toStrictEqual(
-			new Set<number>([1, 2, 3, 4, 5, 6, 7, 8]),
+			new Set<number>(expected),
 		);
 	});
 });
