@@ -22,6 +22,7 @@ export default defineConfig({
 	test: {
 		includeSource: ['src/**/*.{js,ts}'],
 		coverage: {
+			include: ['src/**/*.{js,ts}'],
 			provider: 'v8',
 			reporter: [ 'text', 'json', 'html' ],
 		},
