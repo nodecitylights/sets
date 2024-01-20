@@ -130,7 +130,7 @@ next-env.d.ts
 .pnp.*
 
 # TypeDoc
-docs/typedocs
+docs/typedoc
 
 # Storybook
 build-storybook.log

@@ -53,7 +53,7 @@
 		"entryPoints": [
 			"src/index.ts"
 		],
-		"out": "docs/typedocs",
+		"out": "docs/typedoc",
 		"lightHighlightTheme": "github-light",
 		"darkHighlightTheme": "github-dark"
 	}
