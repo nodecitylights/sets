@@ -1,8 +1,8 @@
 # @neoncitylights/sets
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 [![npm (scoped)](https://img.shields.io/npm/v/@neoncitylights/sets?style=flat-square)](https://www.npmjs.com/package/@neoncitylights/sets)
-[![Codecov](https://img.shields.io/codecov/c/github/neoncitylights/ts-sets?style=flat-square&logo=codecov&logoColor=%23fff)](https://codecov.io/gh/neoncitylights/ts-sets)
-[![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/neoncitylights/ts-sets/.github%2Fworkflows%2Fmain.yml?style=flat-square)](https://github.com/neoncitylights/ts-sets/actions/workflows/main.yml)
+[![Codecov](https://img.shields.io/codecov/c/github/nodecitylights/sets?style=flat-square&logo=codecov&logoColor=%23fff)](https://codecov.io/gh/nodecitylights/sets)
+[![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/nodecitylights/sets/.github%2Fworkflows%2Fmain.yml?style=flat-square)](https://github.com/nodecitylights/sets/actions/workflows/main.yml)
 
 A library written in TypeScript implementing the mathematical branch known as set theory - a subset of discrete mathematics.
 
