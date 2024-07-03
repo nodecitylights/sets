@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'vitest'
 
 import {
 	areSetsDisjoint,
@@ -9,7 +9,7 @@ import {
 	isProperSupersetOf,
 	isSubsetOf,
 	isSupersetOf,
-} from '../src';
+} from '../src'
 
 describe('containsAllElements', () => {
 	test.each([
@@ -20,9 +20,9 @@ describe('containsAllElements', () => {
 		expect(containsAllElements(
 			new Set(a),
 			new Set(b),
-		)).toBe(expected);
-	});
-});
+		)).toBe(expected)
+	})
+})
 
 describe('areSetsDisjoint', () => {
 	test.each([
@@ -33,9 +33,9 @@ describe('areSetsDisjoint', () => {
 		expect(areSetsDisjoint(
 			new Set<number>(a),
 			new Set<number>(b),
-		)).toBe(expected);
-	});
-});
+		)).toBe(expected)
+	})
+})
 
 describe('areSetsEqual', () => {
 	test.each([
@@ -45,9 +45,9 @@ describe('areSetsEqual', () => {
 		expect(areSetsEqual(
 			new Set(a),
 			new Set(b),
-		)).toBe(expected);
-	});
-});
+		)).toBe(expected)
+	})
+})
 
 describe('areSetsEquivalent', () => {
 	test.each([
@@ -58,9 +58,9 @@ describe('areSetsEquivalent', () => {
 		expect(areSetsEquivalent<number>(
 			new Set<number>(a),
 			new Set<number>(b),
-		)).toBe(expected);
-	});
-});
+		)).toBe(expected)
+	})
+})
 
 describe('isProperSubsetOf', () => {
 	test.each([
@@ -71,9 +71,9 @@ describe('isProperSubsetOf', () => {
 		expect(isProperSubsetOf(
 			new Set([1, 2, 3, 4, 5]),
 			new Set([1, 2, 3, 4, 5, 6, 7, 8, 9]),
-		)).toBe(true);
-	});
-});
+		)).toBe(true)
+	})
+})
 
 describe('isProperSupersetOf', () => {
 	test.each([
@@ -84,9 +84,9 @@ describe('isProperSupersetOf', () => {
 		expect(isProperSupersetOf(
 			new Set(a),
 			new Set(b),
-		)).toBe(expected);
-	});
-});
+		)).toBe(expected)
+	})
+})
 
 describe('isSubsetOf', () => {
 	test.each([
@@ -98,9 +98,9 @@ describe('isSubsetOf', () => {
 		expect(isSubsetOf(
 			new Set(a),
 			new Set(b),
-		)).toBe(expected);
-	});
-});
+		)).toBe(expected)
+	})
+})
 
 describe('isSupersetOf', () => {
 	test.each([
@@ -112,6 +112,6 @@ describe('isSupersetOf', () => {
 		expect(isSupersetOf(
 			new Set(a),
 			new Set(b),
-		)).toBe(expected);
-	});
-});
+		)).toBe(expected)
+	})
+})

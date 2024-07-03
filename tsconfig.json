@@ -1,14 +1,25 @@
 // Handbook: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
 // Reference: https://www.typescriptlang.org/tsconfig
 {
+	"include": [
+		"src"
+	],
+	"exclude": [
+		"node_modules",
+		"**/tests/*",
+	],
 	"compilerOptions": {
+		"baseUrl": "./src",
+		"rootDir": "./src",
+
 		/* base options */
 		"esModuleInterop": true,
 		"skipLibCheck": true,
 		"allowJs": true,
 		"resolveJsonModule": true,
-		"verbatimModuleSyntax": true,
 		"moduleDetection": "force",
+		"isolatedModules": true,
+		"verbatimModuleSyntax": true,
 
 		/* strictness */
 		"strict": true,
@@ -16,7 +27,6 @@
 		"allowUnusedLabels": false,
 		"allowUnreachableCode": false,
 		"exactOptionalPropertyTypes": true,
-		"noFallthroughCasesInSwitch": true,
 		"noImplicitOverride": true,
 		"noImplicitReturns": true,
 		"noPropertyAccessFromIndexSignature": true,
@@ -27,34 +37,21 @@
 		/** ES support */
 		"useDefineForClassFields": true,
 
-		/* transpilation */
+		/** transpilation */
 		"lib": [ "ES2022" ],
 		"target": "ES2022",
 		"module": "ESNext",
 		"moduleResolution": "Bundler",
 		"noEmit": true,
 		"declaration": true,
-		"isolatedModules": true,
-		"baseUrl": "./src",
-		"sourceMap": true,
 		"types": [
 			"vitest/importMeta"
 		],
 	},
-	"include": [
-		"src/**/*.ts"
-	],
-	"exclude": [
-		"node_modules",
-		"**/tests/*",
-		"**/__tests__/*"
-	],
 	"typedocOptions": {
 		"entryPoints": [
 			"src/index.ts"
 		],
-		"out": "docs/typedoc",
-		"lightHighlightTheme": "github-light",
-		"darkHighlightTheme": "github-dark"
+		"out": "docs/typedoc"
 	}
 }

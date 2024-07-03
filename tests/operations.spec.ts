@@ -1,11 +1,11 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'vitest'
 
 import {
 	getDifference,
 	getIntersection,
 	getSymmetricDifference,
 	getUnion,
-} from '../src';
+} from '../src'
 
 describe('getDifference', () => {
 	test.each([
@@ -16,9 +16,9 @@ describe('getDifference', () => {
 		expect(getDifference(
 			new Set(a),
 			new Set(b),
-		)).toStrictEqual(new Set(expected));
-	});
-});
+		)).toStrictEqual(new Set(expected))
+	})
+})
 
 describe('getIntersection', () => {
 	test.each([
@@ -31,9 +31,9 @@ describe('getIntersection', () => {
 			new Set<number>(b),
 		)).toStrictEqual(
 			new Set<number>(expected),
-		);
-	});
-});
+		)
+	})
+})
 
 describe('getSymmetricDifference', () => {
 	test.each([
@@ -47,9 +47,9 @@ describe('getSymmetricDifference', () => {
 			new Set<number>(b),
 		)).toStrictEqual(
 			new Set<number>(expected),
-		);
-	});
-});
+		)
+	})
+})
 
 describe('getUnion', () => {
 	test.each([
@@ -62,6 +62,6 @@ describe('getUnion', () => {
 			new Set<number>(b),
 		)).toStrictEqual(
 			new Set<number>(expected),
-		);
-	});
-});
+		)
+	})
+})

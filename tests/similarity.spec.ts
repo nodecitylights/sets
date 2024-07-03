@@ -1,11 +1,11 @@
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'vitest'
 
 import {
 	getJaccardSimilarityCoefficient,
 	getLogDice,
 	getOverlapCoefficient,
 	getSorensenDiceCoefficient,
-} from '../src';
+} from '../src'
 
 describe('Jaccard\'s Similarity Coefficient', () => {
 	test.each([
@@ -15,9 +15,9 @@ describe('Jaccard\'s Similarity Coefficient', () => {
 		expect(getJaccardSimilarityCoefficient(
 			new Set(a),
 			new Set(b),
-		)).toBeCloseTo(expected);
-	});
-});
+		)).toBeCloseTo(expected)
+	})
+})
 
 describe('Pavel Rychlý\'s LogDice', () => {
 	test.each([
@@ -27,24 +27,24 @@ describe('Pavel Rychlý\'s LogDice', () => {
 		expect(getLogDice(
 			new Set(a.split(' ')),
 			new Set(b.split(' ')),
-		)).toBe(14);
-	});
-});
+		)).toBe(14)
+	})
+})
 
 describe('Overlap Coefficient', () => {
 	test('computes correctly', () => {
 		expect(getOverlapCoefficient(
 			new Set([1, 2, 3, 4]),
 			new Set([3, 4, 5, 6, 7]),
-		)).toBeCloseTo(1/2);
-	});
-});
+		)).toBeCloseTo(1 / 2)
+	})
+})
 
 describe('Sorensen\'s Dice Coefficient', () => {
 	test('computes correctly', () => {
 		expect(getSorensenDiceCoefficient(
 			new Set('hello new world'.split(' ')),
 			new Set('hello world'.split(' ')),
-		)).toBeCloseTo(8/10);
-	});
-});
+		)).toBeCloseTo(8 / 10)
+	})
+})

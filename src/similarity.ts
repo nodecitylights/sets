@@ -1,4 +1,4 @@
-import { getIntersection, getUnion } from './operations';
+import { getIntersection, getUnion } from './operations'
 
 /**
  * Aalso known as the Jaccard Similarity Coefficient, it is a
@@ -14,11 +14,11 @@ import { getIntersection, getUnion } from './operations';
  * the similarity between two sets
  */
 export function getJaccardSimilarityCoefficient<TElement>(a: Set<TElement>, b: Set<TElement>): number {
-	if(a.size === 0 || b.size === 0) {
-		return 1;
+	if (a.size === 0 || b.size === 0) {
+		return 1
 	}
 
-	return getIntersection(a, b).size / getUnion(a, b).size;
+	return getIntersection(a, b).size / getUnion(a, b).size
 }
 
 /**
@@ -44,7 +44,7 @@ export function getJaccardSimilarityCoefficient<TElement>(a: Set<TElement>, b: S
  *  - The score is independent of the given corpus's size
  */
 export function getLogDice<TElement>(a: Set<TElement>, b: Set<TElement>): number {
-	return 14 + Math.log2(getSorensenDiceCoefficient(a, b));
+	return 14 + Math.log2(getSorensenDiceCoefficient(a, b))
 }
 
 /**
@@ -57,7 +57,7 @@ export function getLogDice<TElement>(a: Set<TElement>, b: Set<TElement>): number
  * @returns The overlap score between 2 sets
  */
 export function getOverlapCoefficient<TElement>(a: Set<TElement>, b: Set<TElement>): number {
-	return getIntersection(a, b).size / Math.min(a.size, b.size);
+	return getIntersection(a, b).size / Math.min(a.size, b.size)
 }
 
 /**
@@ -75,5 +75,5 @@ export function getOverlapCoefficient<TElement>(a: Set<TElement>, b: Set<TElemen
  * where the coefficient is part of the unit interval
  */
 export function getSorensenDiceCoefficient<TElement>(a: Set<TElement>, b: Set<TElement>): number {
-	return (2 * getIntersection(a, b).size) / (a.size + b.size);
+	return (2 * getIntersection(a, b).size) / (a.size + b.size)
 }
