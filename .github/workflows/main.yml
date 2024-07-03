@@ -34,21 +34,15 @@ jobs:
       matrix:
         include:
           - tool: ESLint
-            npm-cmd-suffix: es
+            npm-cmd: eslint
             npm-cmd-env: |
-              npm run lint:es-env
-          - tool: Markdownlint
-            npm-cmd-suffix: md
-            npm-cmd-env: |
-              node --version
-              npm --version
-              npm run lint:md-env
+              npx eslint --env-info
           - tool: publint
-            npm-cmd-suffix: pub
+            npm-cmd-suffix: publint
             npm-cmd-env: |
               node --version
               npm --version
-              npm run lint:pub-env
+              npx publint --version
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -63,7 +57,7 @@ jobs:
         run: |
           ${{ matrix.npm-cmd-env }}
       - name: Lint with ${{ matrix.tool }}
-        run: npm run lint:${{ matrix.npm-cmd-suffix }}
+        run: npm run ${{ matrix.npm-cmd }}
 
   test:
     runs-on: ubuntu-latest
@@ -80,7 +74,7 @@ jobs:
       - name: Test
         run: npm run test
       - name: Upload code coverage
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           verbose: true
@@ -102,15 +96,3 @@ jobs:
         run: npm publish --access public --dry-run
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-  ci-success:
-    runs-on: ubuntu-latest
-    if: ${{ success() }}
-    needs:
-      - build
-      - lint
-      - test
-      - pkg-dry-run
-    steps:
-      - name: ✅ CI succeeded
-        run: exit 0
