@@ -4,7 +4,7 @@
  * - **Formal definition**: `A ∩ B = ϕ`
  * - This method runs in bilinear time, or `O(m * n)`,
  *   where `m = |B|` (size of set B) and `n = |A|` (size of set A).
- * 
+ *
  * @see [`Set.prototype.isDisjointFrom`](https://tc39.es/proposal-set-methods/#sec-set.prototype.isdisjointfrom)
  * @example
  * ```ts
@@ -22,12 +22,12 @@ export function areSetsDisjoint<TElement>(a: Set<TElement>, b: Set<TElement>): b
 	for (const aElement of a) {
 		for (const bElement of b) {
 			if (aElement === bElement) {
-				return false;
+				return false
 			}
 		}
 	}
 
-	return true;
+	return true
 }
 
 /**
@@ -38,7 +38,7 @@ export function areSetsDisjoint<TElement>(a: Set<TElement>, b: Set<TElement>): b
  *    (size of set A).
  *  - **Note**: This does not check for reference/entity equality,
  *    but rather value equality.
- * 
+ *
  * @example
  * ```ts
  * // {1, 2, 3, 4} = {1, 2, 3, 4}
@@ -52,7 +52,7 @@ export function areSetsDisjoint<TElement>(a: Set<TElement>, b: Set<TElement>): b
  * @returns Whether `A = B` is true
  */
 export function areSetsEqual<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
-	return areSetsEquivalent(a, b) && containsAllElements(a, b);
+	return areSetsEquivalent(a, b) && containsAllElements(a, b)
 }
 
 /**
@@ -71,7 +71,7 @@ export function areSetsEqual<TElement>(a: Set<TElement>, b: Set<TElement>): bool
  * @returns Whether `|A| = |B|` is true
  */
 export function areSetsEquivalent<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
-	return a.size === b.size;
+	return a.size === b.size
 }
 
 /**
@@ -92,7 +92,7 @@ export function areSetsEquivalent<TElement>(a: Set<TElement>, b: Set<TElement>):
  * @returns Whether `A ⊂ B` is true
  */
 export function isProperSubsetOf<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
-	return a.size < b.size && containsAllElements(b, a);
+	return a.size < b.size && containsAllElements(b, a)
 }
 
 /**
@@ -113,7 +113,7 @@ export function isProperSubsetOf<TElement>(a: Set<TElement>, b: Set<TElement>): 
  * @returns Whether `A ⊃ B` is true
  */
 export function isProperSupersetOf<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
-	return a.size > b.size && containsAllElements(a, b);
+	return a.size > b.size && containsAllElements(a, b)
 }
 
 /**
@@ -135,7 +135,7 @@ export function isProperSupersetOf<TElement>(a: Set<TElement>, b: Set<TElement>)
  * @returns Whether `A ⊆ B` is true
  */
 export function isSubsetOf<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
-	return a.size <= b.size && containsAllElements(b, a);
+	return a.size <= b.size && containsAllElements(b, a)
 }
 
 /**
@@ -157,7 +157,7 @@ export function isSubsetOf<TElement>(a: Set<TElement>, b: Set<TElement>): boolea
  * @returns Whether `A ⊇ B` is true
  */
 export function isSupersetOf<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
-	return a.size >= b.size && containsAllElements(a, b);
+	return a.size >= b.size && containsAllElements(a, b)
 }
 
 /**
@@ -173,9 +173,9 @@ export function isSupersetOf<TElement>(a: Set<TElement>, b: Set<TElement>): bool
 export function containsAllElements<TElement>(a: Set<TElement>, b: Set<TElement>): boolean {
 	for (const element of b) {
 		if (!a.has(element)) {
-			return false;
+			return false
 		}
 	}
 
-	return true;
+	return true
 }

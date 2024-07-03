@@ -9,26 +9,22 @@
 	"keywords": [
 		"sets",
 		"set-theory",
-		"discrete-mathematics",
 		"tc-39"
 	],
 	"license": "MIT",
-	"bugs": "https://github.com/neoncitylights/ts-sets/issues",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/neoncitylights/ts-sets.git"
-	},
+	"bugs": "https://github.com/nodecitylights/sets/issues",
+	"repository": "github:nodecitylights/sets",
 	"funding": {
 		"type": "individual",
-		"url": "https://github.com/sponsors/neoncitylights"
+		"url": "https://github.com/sponsors/nodecitylights"
 	},
 	"type": "module",
 	"types": "./dist/index.d.ts",
-	"module": "./dist/sets.mjs",
+	"module": "./dist/sets.js",
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"import": "./dist/sets.mjs"
+			"import": "./dist/sets.js"
 		}
 	},
 	"files": [
@@ -37,42 +33,35 @@
 	"scripts": {
 		"build": "vite build",
 		"docs": "npx typedoc",
-		"dosc:watch": "npm run docs -- --watch",
-		"build:all": "npm run build && npm run docs",
+		"dosc-watch": "npm run docs -- --watch",
+		"build-all": "npm run build && npm run docs",
 		"clean": "rm -rf ./dist/ ./docs/typedoc/ ./node_modules && rm -rf ./package-lock.json",
 		"reinstall": "npm run clean && npm install",
 		"test": "vitest --coverage",
-		"test:ci": "npm run test -- run",
-		"test:ui": "npm run test -- --ui",
-		"test:watch": "npm run test -- --watch",
-		"test:all": "npm run test:ci && npm run lint",
-		"lint": "npm run lint:md && npm run lint:es && npm run lint:pub",
-		"lint:fix": "npm run lint:md-fix && npm run lint:es-fix",
-		"lint:md": "markdownlint-cli2 \"*/**.md\" \"#node_modules\"",
-		"lint:md-fix": "npm run lint:md -- --fix",
-		"lint:md-env": "markdownlint-cli2 --version",
-		"lint:es": "eslint . --ext .ts,.tsx",
-		"lint:es-fix": "npm run lint:es -- --fix",
-		"lint:es-env": "eslint --env-info",
-		"lint:pub": "publint",
-		"lint:pub-env": "publint --version",
+		"test-ci": "npm run test -- run",
+		"test-ui": "npm run test -- --ui",
+		"test-watch": "npm run test -- --watch",
+		"test-all": "npm run test-ci && npm run lint",
+		"lint": "npm run eslint && npm run publint",
+		"lint-fix": "npm run eslint-fix",
+		"eslint": "eslint src/** tests/**",
+		"eslint-fix": "npm run eslint -- --fix",
+		"publint": "publint",
 		"prepare": "npm run build",
-		"prepublishOnly": "npm run test:all",
-		"preversion": "npm run lint",
-		"version": "npm run lint && git add -A src",
-		"postversion": "git push && git push --tags"
+		"prepublishOnly": "npm run test-all"
 	},
 	"devDependencies": {
+		"@eslint/js": "^9.6.0",
+		"@stylistic/eslint-plugin": "^2.3.0",
+		"@types/eslint__js": "^8.42.3",
 		"@types/node": "^20.10.6",
 		"@vitest/coverage-v8": "^1.1.1",
 		"@vitest/ui": "^1.1.1",
 		"eslint": "8.56.0",
-		"eslint-config-neoncitylights": "^0.3.0",
-		"markdownlint-cli2": "^0.12.1",
-		"markdownlint-config-neoncitylights": "^0.3.0",
 		"publint": "^0.2.7",
 		"typedoc": "0.25.7",
 		"typescript": "5.3.3",
+		"typescript-eslint": "^7.15.0",
 		"vite": "^5.0.10",
 		"vite-plugin-dts": "^3.6.4",
 		"vitest": "^1.1.1"

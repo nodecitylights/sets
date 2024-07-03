@@ -6,7 +6,7 @@
  *    (size of set B).
  *  - This method has *no side effects*, returning a new
  *    `Set<TElement>` instance.
- * 
+ *
  * @see [`Set.prototype.difference`](https://tc39.es/proposal-set-methods/#sec-set.prototype.difference)
  * @example
  * ```ts
@@ -18,12 +18,12 @@
  * @returns Difference of A and B
  */
 export function getDifference<TElement>(a: Set<TElement>, b: Set<TElement>): Set<TElement> {
-	const difference = new Set<TElement>(a);
+	const difference = new Set<TElement>(a)
 	for (const element of b) {
-		difference.delete(element);
+		difference.delete(element)
 	}
 
-	return difference;
+	return difference
 }
 
 /**
@@ -34,7 +34,7 @@ export function getDifference<TElement>(a: Set<TElement>, b: Set<TElement>): Set
  *    `n = |B|` (size of set B) and `m = |A|` (size of set A).
  *  - This method has *no side effects*, returning a new
  *    `Set<TElement>` instance.
- * 
+ *
  * @see [`Set.prototype.intersection`](https://tc39.es/proposal-set-methods/#sec-set.prototype.intersection)
  * @example
  * ```ts
@@ -46,14 +46,14 @@ export function getDifference<TElement>(a: Set<TElement>, b: Set<TElement>): Set
  * @returns Intersection of A and B
  */
 export function getIntersection<TElement>(a: Set<TElement>, b: Set<TElement>): Set<TElement> {
-	const intersection = new Set<TElement>();
+	const intersection = new Set<TElement>()
 	for (const element of b) {
 		if (a.has(element)) {
-			intersection.add(element);
+			intersection.add(element)
 		}
 	}
 
-	return intersection;
+	return intersection
 }
 
 /**
@@ -65,7 +65,7 @@ export function getIntersection<TElement>(a: Set<TElement>, b: Set<TElement>): S
  * 	 - `A △ B = {x: (X ∈ A) ⊕ (X ∈ B)}`: Set-builder notation with XOR operation and predicates
  * 	 - `A △ B = (A ∪ B) \ (B ∪ A)`: Difference of the unions of both sets
  *  - **Time complexity**:
- * 
+ *
  * @see [`Set.prototype.symmetricDifference`](https://tc39.es/proposal-set-methods/#sec-set.prototype.symmetricdifference)
  * @example
  * ```
@@ -77,7 +77,7 @@ export function getIntersection<TElement>(a: Set<TElement>, b: Set<TElement>): S
  * @returns The symmetric difference, `A △ B`
  */
 export function getSymmetricDifference<TElement>(a: Set<TElement>, b: Set<TElement>): Set<TElement> {
-	return getUnion(getDifference(a, b), getDifference(b, a));
+	return getUnion(getDifference(a, b), getDifference(b, a))
 }
 
 /**
@@ -88,7 +88,7 @@ export function getSymmetricDifference<TElement>(a: Set<TElement>, b: Set<TEleme
  *    (size of set B).
  *  - This method has *no side effects*, returning a new
  *    `Set<TElement>` instance.
- * 
+ *
  * @see [`Set.prototype.union`](https://tc39.es/proposal-set-methods/#sec-set.prototype.union)
  * @example
  * ```ts
@@ -100,10 +100,10 @@ export function getSymmetricDifference<TElement>(a: Set<TElement>, b: Set<TEleme
  * @returns Union of A and B
  */
 export function getUnion<TElement>(a: Set<TElement>, b: Set<TElement>): Set<TElement> {
-	const union = new Set<TElement>(a);
+	const union = new Set<TElement>(a)
 	for (const element of b) {
-		union.add(element);
+		union.add(element)
 	}
 
-	return union;
+	return union
 }

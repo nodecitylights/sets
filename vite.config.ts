@@ -1,18 +1,16 @@
-import path from 'node:path';
-
 import dts from 'vite-plugin-dts';
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
 	build: {
 		lib: {
-			entry: path.resolve(__dirname, 'src/index.ts'),
+			entry: new URL('src/index.ts', import.meta.url).pathname,
 			formats: ['es'],
-			fileName: () => 'sets.mjs',
+			fileName: () => 'sets.js',
 		},
 	},
-	define: { 
-		'import.meta.vitest': 'undefined', 
+	define: {
+		'import.meta.vitest': 'undefined',
 	},
 	plugins: [
 		dts({
